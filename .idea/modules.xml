@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/.idea/UniEnt_Resources.iml" filepath="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/.idea/UniEnt_Resources.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/quiz-shop.iml" filepath="$PROJECT_DIR$/.idea/quiz-shop.iml" />
     </modules>
   </component>

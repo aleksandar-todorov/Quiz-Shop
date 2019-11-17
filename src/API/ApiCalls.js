@@ -1,4 +1,5 @@
 import $ from 'jquery'
+
 const kinvey = (() => {
     const BASE_URL = 'https://baas.kinvey.com/';
     const APP_KEY = 'kid_HJsnRrHjS'; // APP KEY HERE
@@ -17,7 +18,6 @@ const kinvey = (() => {
     }
 
     const login = (username, password) => {
-        console.log(this)
         return this.post('user', 'login', 'basic', {
             username,
             password
