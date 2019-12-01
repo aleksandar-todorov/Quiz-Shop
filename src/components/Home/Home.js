@@ -5,8 +5,6 @@ import {Link} from 'react-router-dom'
 import './Home.css'
 import QuizShopPic from '../../images/quizshop.png'
 import NotFoundPic from '../../images/404face.png'
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 
 class Home extends Component {
 
@@ -38,8 +36,8 @@ class Home extends Component {
 
 
     renderNotLoggedView = () => (
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div className="col-md-8">
+        <div className="d-md-flex flex-md-equal w-100 my-md-3 px-md-5 mx-5">
+            <div className="col-md-6">
                 <h2 className="featurette-heading">Buy products <span className="text-muted">which will improve your life!</span>
                 </h2>
                 <p className="lead">Join our community.</p>
@@ -50,7 +48,7 @@ class Home extends Component {
                 <p className="lead">Enjoy life!</p>
             </div>
             <div className="col-md-4">
-                <img className="home-quiz-picture" src={QuizShopPic} alt=''/>
+                <img className="home-quiz-picture  center-block" src={QuizShopPic} alt=''/>
             </div>
         </div>
     )
@@ -58,9 +56,7 @@ class Home extends Component {
     render() {
         return (
             <>
-                <Header/>
                 {this.props.isLoggedIn ? this.renderLoggedInView() : this.renderNotLoggedView()}
-                <Footer/>
             </>
         )
     }

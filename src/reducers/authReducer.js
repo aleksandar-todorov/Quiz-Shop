@@ -10,6 +10,13 @@ const loginAction = (username, password) => {
     }))
 };
 
+// const registerAction = (username, password) => {
+//     kinvey.register(username, password).then(data => ({
+//         type: REGISTER_ACTION,
+//         payload: data
+//     }))
+// };
+
 
 const initialState = {
     isLoggedIn: false
@@ -22,5 +29,10 @@ export const isLoggedInReducer = (state = initialState, action) => {
                 loggedInUser : action.payload
             }
         }
+        // case REGISTER_ACTION : {
+        //     return {
+        //         loggedInUser : action.payload
+        //     }
+        // }
     }
 }

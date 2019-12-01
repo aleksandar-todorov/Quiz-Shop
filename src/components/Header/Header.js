@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-
-import Home from "../Home/Home";
 import "./Header.css"
 
 class Header extends Component {
@@ -27,7 +25,7 @@ class Header extends Component {
                 <header id="site-header">
                     <nav className="site-header sticky-top py-1">
                         <div className="container d-flex flex-column flex-md-row justify-content-between">
-                            <Link to={Home} className="py-2">
+                            <Link to="/" className="py-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                      stroke="currentColor"
                                      strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"

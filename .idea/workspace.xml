@@ -4,17 +4,16 @@
     <list default="true" id="fddc99b4-1ebd-4131-90b2-3918f34393fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/views/common/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/views/common/header.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/quiz-shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/quiz-shop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/abetterman.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/abetterman.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/ApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/ApiCalls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -39,7 +38,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery/styles" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -48,12 +47,13 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\components\Home" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop old ver - node and jquery\styles" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
       <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\components\Home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -99,6 +99,8 @@
       <workItem from="1574014642075" duration="4167000" />
       <workItem from="1574018822385" duration="521000" />
       <workItem from="1574019353622" duration="4399000" />
+      <workItem from="1574532050092" duration="5151000" />
+      <workItem from="1575192074076" duration="15654000" />
     </task>
     <servers />
   </component>

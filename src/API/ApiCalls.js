@@ -7,18 +7,14 @@ const kinvey = (() => {
 
     function makeAuth(auth) {
         if (auth === 'basic') {
-            return {
-                'Authorization': `Basic ${btoa(APP_KEY + ':' + APP_SECRET)}`
-            }
+            return {'Authorization': `Basic ${btoa(APP_KEY + ':' + APP_SECRET)}`}
         } else {
-            return {
-                'Authorization': `Kinvey ${sessionStorage.getItem('authtoken')}`
-            }
+            return {'Authorization': `Kinvey ${sessionStorage.getItem('authtoken')}`}
         }
     }
 
     const login = (username, password) => {
-        return this.post('user', 'login', 'basic', {
+        return post('user', 'login', 'basic', {
             username,
             password
         });
@@ -27,7 +23,6 @@ const kinvey = (() => {
     const logout = () => {
         return this.post('user', '_logout', 'kinvey');
     }
-
 
     function makeRequest(method, collection, endpoint, auth) {
         return {
