@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from "react-redux";
-
+import {loginAction} from 'reducers/authReducer'
 import kinvey from '../../API/ApiCalls'
 import Home from '../../components/Home/Home'
 
@@ -81,9 +81,10 @@ class Login extends Component {
     submitHandler = (e) => {
         e.preventDefault();
         const {username, password} = this.state;
-        kinvey.login(username, password).then((res) => {
+        this.props.loginAction(username, password).then((res) => {
+
             this.props.history.push("/");
-        }).catch(function (err) {
+        }).catch((err)=> {
             this.setState({
                 error: 'Sorry, wrong credentials. Try again!'
             })
@@ -91,10 +92,13 @@ class Login extends Component {
     }
 }
 
+const mapDispatchToProps = ({ loginAction }) => ({
+    loginAction
+})
 const mapStateToProps = (isLoggedInReducer) => {
     return {
         isLoggedIn: isLoggedInReducer
     }
 }
 
-export default connect(mapStateToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
