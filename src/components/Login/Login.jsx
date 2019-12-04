@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from "react-redux";
-import {loginAction} from 'reducers/authReducer'
-import kinvey from '../../API/ApiCalls'
+import {userActions} from '../../actions/userActions'
 import Home from '../../components/Home/Home'
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
+
+        this.props.logout();
 
         this.state = {
             username: '',
@@ -81,24 +82,39 @@ class Login extends Component {
     submitHandler = (e) => {
         e.preventDefault();
         const {username, password} = this.state;
-        this.props.loginAction(username, password).then((res) => {
-
-            this.props.history.push("/");
-        }).catch((err)=> {
-            this.setState({
-                error: 'Sorry, wrong credentials. Try again!'
-            })
-        })
+        this.props.login(username, password)
+        //     .then(() => {
+        //
+        //     this.props.history.push("/");
+        // }).catch(()=> {
+        //     this.setState({
+        //         error: 'Sorry, wrong credentials. Try again!'
+        //     })
+        // })
     }
 }
 
-const mapDispatchToProps = ({ loginAction }) => ({
-    loginAction
-})
-const mapStateToProps = (isLoggedInReducer) => {
-    return {
-        isLoggedIn: isLoggedInReducer
-    }
-}
+// function mapStateToProps(state) {
+//     const { isLoggedIn } = state.authentication;
+//     return { isLoggedIn };
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+const mapDispatchToProps = {
+    login: userActions.login,
+    logout: userActions.logout
+};
+
+
+export default connect(null, mapDispatchToProps)(Login)
+
+// const mapDispatchToProps = {
+//     loginAction : isLoggedInReducer
+// }
+// const mapStateToProps = (isLoggedInReducer) => {
+//     return {
+//         isLoggedIn: isLoggedInReducer
+//     }
+// }
+//
+// export default connect(mapStateToProps, mapDispatchToProps)(Login)
+

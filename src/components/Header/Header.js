@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+
 import "./Header.css"
+import {authentication} from "../../reducers/authReducer";
 
 class Header extends Component {
 
@@ -13,7 +15,7 @@ class Header extends Component {
         <>
             <Link to={"/user/info"} className="py-2 d-none d-md-inline-block">My Profile</Link>
             <Link to={"/quizzes"} className="py-2 d-none d-md-inline-block">Take Quiz</Link>
-            <Link to={"/logout"} className="py-2 d-none d-md-inline-block">Logout</Link>
+            <Link to={"/login"} className="py-2 d-none d-md-inline-block">Logout</Link>
         </>
     )
 
@@ -47,12 +49,18 @@ class Header extends Component {
     }
 }
 
-const mapStateToProps = (isLoggedInReducer) => {
-    return {
-        isLoggedIn: isLoggedInReducer
-    }
+// function mapStateToProps(state) {
+//     const {authentication} = state;
+//     const {user} = authentication;
+//     return {user};
+// }
+
+const mapStateToProps = state => {
+    const authentication = state
+    const user = authentication
+    return user
 }
 
 export default connect(mapStateToProps)(Header)
 
-
+// export default Header

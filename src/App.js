@@ -1,25 +1,32 @@
-import React from 'react'
-import {Switch, Route, Router} from 'react-router-dom'
-import {createBrowserHistory} from "history"
-import {createStore, applyMiddleware, compose} from "redux"
-import {isLoggedInReducer} from './reducers/authReducer'
-import thunk from 'redux-thunk'
+import React, {Component} from 'react'
+import {Route, Router, Switch} from 'react-router-dom'
+import {connect} from "react-redux"
+
 import './App.css'
 import Home from './components/Home/Home'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
-import {Provider} from "react-redux"
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
+import {history} from './helpers/history';
+import {alertActions} from './actions/alertActions';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(isLoggedInReducer, composeEnhancers(applyMiddleware(thunk)));
-const history = createBrowserHistory();
 
-function App() {
-    return (
-        <Provider store={store}>
+class App extends Component {
+    constructor(props) {
+        super(props);
+
+        history.listen((location, action) => {
+            // clear alert on location change
+            this.props.clearAlerts();
+        });
+    }
+
+    render() {
+        const {alert} = this.props;
+        return (
+
             <Router history={history}>
                 <Header/>
                 <Switch>
@@ -28,10 +35,27 @@ function App() {
                     <Route path={"/register"} component={Register}/>
                     <Route component={ErrorPage}/>
                 </Switch>
+                <div className="container">
+                    <div className="col-sm-8 col-sm-offset-2">
+                        {/*{alert.message &&*/}
+                        {/*<div className={`alert ${alert.type}`}>{alert.message}</div>*/}
+                        {/*}*/}
+                    </div>
+                </div>
                 <Footer/>
             </Router>
-        </Provider>
-    );
+
+        );
+    }
 }
 
-export default App;
+function mapStateToProps(state) {
+    const {alert} = state;
+    return {alert};
+}
+
+const mapDispatchToProps = {
+    clearAlerts: alertActions.clear
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

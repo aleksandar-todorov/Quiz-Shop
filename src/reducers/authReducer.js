@@ -1,44 +1,25 @@
-import kinvey from '../API/ApiCalls'
-const LOGIN_ACTION = 'login'
-const REGISTER_ACTION = 'register'
+import { userConstants } from '../constants/userConstants';
 
-const loginAction = (username, password) => (dispatch) => {
-    dispatch({
-        type: LOGIN_ACTION,
-        payload: {username, password}
-    })
+let user = JSON.parse(localStorage.getItem('user'));
+const initialState = user ? { isLoggedIn: true, user } : {};
 
-    return kinvey.login(username, password).then(resp => {
-        dispatch({
-            type: LOGIN_ACTION,
-        })
-
-        return resp;
-    })
-};
-
-// const registerAction = (username, password) => {
-//     kinvey.register(username, password).then(data => ({
-//         type: REGISTER_ACTION,
-//         payload: data
-//     }))
-// };
-
-const initialState = {
-    isLoggedIn: false
-}
-
-export const isLoggedInReducer = (state = initialState, action) => {
+export function authentication(state = initialState, action) {
     switch (action.type) {
-        case LOGIN_ACTION : {
+        case userConstants.LOGIN_REQUEST:
             return {
-                resp: action.payload
-            }
-        }
-        // case REGISTER_ACTION : {
-        //     return {
-        //         loggedInUser : action.payload
-        //     }
-        // }
+                isLoggingIn: true,
+                user: action.user
+            };
+        case userConstants.LOGIN_SUCCESS:
+            return {
+                isLoggedIn: true,
+                user: action.user
+            };
+        case userConstants.LOGIN_FAILURE:
+            return {};
+        case userConstants.LOGOUT:
+            return {};
+        default:
+            return state
     }
 }

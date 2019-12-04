@@ -21,7 +21,7 @@ const kinvey = (() => {
     }
 
     const logout = () => {
-        return this.post('user', '_logout', 'kinvey');
+        return post('user', '_logout', 'kinvey');
     }
 
     function makeRequest(method, collection, endpoint, auth) {

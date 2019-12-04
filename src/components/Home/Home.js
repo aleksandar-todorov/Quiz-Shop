@@ -62,9 +62,9 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = (isLoggedInReducer) => {
+const mapStateToProps = (authentication) => {
     return {
-        isLoggedIn: isLoggedInReducer
+        isLoggedIn: authentication
     }
 }
 
