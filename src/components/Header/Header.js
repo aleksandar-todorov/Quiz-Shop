@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 import "./Header.css"
-import {authentication} from "../../reducers/authReducer";
 
 class Header extends Component {
 
@@ -49,18 +48,9 @@ class Header extends Component {
     }
 }
 
-// function mapStateToProps(state) {
-//     const {authentication} = state;
-//     const {user} = authentication;
-//     return {user};
-// }
-
-const mapStateToProps = state => {
-    const authentication = state
-    const user = authentication
-    return user
-}
+const mapStateToProps = state => ({
+    user: state.user,
+    isLoggedIn: state.isLoggedIn
+})
 
 export default connect(mapStateToProps)(Header)
-
-// export default Header

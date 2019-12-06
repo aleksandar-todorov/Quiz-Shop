@@ -24,9 +24,10 @@ class App extends Component {
     }
 
     render() {
+        // console.log(this.props)
         const {alert} = this.props;
-        return (
 
+        return (
             <Router history={history}>
                 <Header/>
                 <Switch>
@@ -37,21 +38,18 @@ class App extends Component {
                 </Switch>
                 <div className="container">
                     <div className="col-sm-8 col-sm-offset-2">
-                        {/*{alert.message &&*/}
-                        {/*<div className={`alert ${alert.type}`}>{alert.message}</div>*/}
-                        {/*}*/}
+                        {alert.message && <div className={`alert ${alert.type}`}>{alert.message}</div>}
                     </div>
                 </div>
                 <Footer/>
             </Router>
-
         );
     }
 }
 
-function mapStateToProps(state) {
-    const {alert} = state;
-    return {alert};
+const mapStateToProps = state => {
+    console.log(state)
+    return {alert: state.alert};
 }
 
 const mapDispatchToProps = {

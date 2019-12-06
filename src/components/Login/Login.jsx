@@ -83,38 +83,13 @@ class Login extends Component {
         e.preventDefault();
         const {username, password} = this.state;
         this.props.login(username, password)
-        //     .then(() => {
-        //
-        //     this.props.history.push("/");
-        // }).catch(()=> {
-        //     this.setState({
-        //         error: 'Sorry, wrong credentials. Try again!'
-        //     })
-        // })
     }
 }
 
-// function mapStateToProps(state) {
-//     const { isLoggedIn } = state.authentication;
-//     return { isLoggedIn };
-// }
 
 const mapDispatchToProps = {
     login: userActions.login,
     logout: userActions.logout
 };
 
-
 export default connect(null, mapDispatchToProps)(Login)
-
-// const mapDispatchToProps = {
-//     loginAction : isLoggedInReducer
-// }
-// const mapStateToProps = (isLoggedInReducer) => {
-//     return {
-//         isLoggedIn: isLoggedInReducer
-//     }
-// }
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(Login)
-

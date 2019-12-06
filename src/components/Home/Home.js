@@ -17,6 +17,7 @@ class Home extends Component {
             <div className="row">
                 <div className="col-md-12">
                     <div id="fouronefour">
+                        <p>Welcome back, {`${this.props.user}`}</p>
                         <img className="no-found-picture" src={NotFoundPic} alt=''/>
                     </div>
                     <div className="error-template">
@@ -48,7 +49,7 @@ class Home extends Component {
                 <p className="lead">Enjoy life!</p>
             </div>
             <div className="col-md-4">
-                <img className="home-quiz-picture  center-block" src={QuizShopPic} alt=''/>
+                <img className="home-quiz-picture center-block" src={QuizShopPic} alt=''/>
             </div>
         </div>
     )
@@ -62,10 +63,10 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = (authentication) => {
-    return {
-        isLoggedIn: authentication
-    }
-}
+const mapStateToProps = state => ({
+    user: state.user,
+    isLoggedIn: state.isLoggedIn
+})
 
 export default connect(mapStateToProps)(Home)
+
