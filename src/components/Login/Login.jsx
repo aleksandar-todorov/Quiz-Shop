@@ -86,7 +86,6 @@ class Login extends Component {
     }
 }
 
-
 const mapDispatchToProps = {
     login: userActions.login,
     logout: userActions.logout

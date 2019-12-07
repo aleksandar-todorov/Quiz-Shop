@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Route, Router, Switch} from 'react-router-dom'
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import {connect} from "react-redux"
 
 import './App.css'
@@ -17,16 +17,15 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        history.listen((location, action) => {
-            // clear alert on location change
-            this.props.clearAlerts();
-        });
+    }
+
+    componentDidMount() {
+        console.log('vliza1 ')
+        this.props.clearAlerts()
     }
 
     render() {
-        // console.log(this.props)
         const {alert} = this.props;
-
         return (
             <Router history={history}>
                 <Header/>
@@ -36,21 +35,20 @@ class App extends Component {
                     <Route path={"/register"} component={Register}/>
                     <Route component={ErrorPage}/>
                 </Switch>
-                <div className="container">
-                    <div className="col-sm-8 col-sm-offset-2">
-                        {alert.message && <div className={`alert ${alert.type}`}>{alert.message}</div>}
-                    </div>
-                </div>
+                {/*<div className="container">*/}
+                {/*    <div className="col-sm-8 col-sm-offset-2">*/}
+                {/*        {alert.message && <div className={`alert ${alert.type}`}>{alert.message}</div>}*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <Footer/>
             </Router>
         );
     }
 }
 
-const mapStateToProps = state => {
-    console.log(state)
-    return {alert: state.alert};
-}
+const mapStateToProps = state => ({
+    alert: state.alert
+})
 
 const mapDispatchToProps = {
     clearAlerts: alertActions.clear
