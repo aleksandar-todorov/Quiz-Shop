@@ -1,31 +1,22 @@
 import React, {Component} from 'react'
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
-import {connect} from "react-redux"
+import {Router, Route, Switch} from 'react-router-dom'
 
 import './App.css'
-import Home from './components/Home/Home'
+import Home from './components/Home/Home.jsx'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
-import Header from "./components/Header/Header";
+import Header from './components/Header/Header.jsx'
 import Footer from "./components/Footer/Footer";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import {history} from './helpers/history';
-import {alertActions} from './actions/alertActions';
 
 
 class App extends Component {
     constructor(props) {
         super(props);
-
-    }
-
-    componentDidMount() {
-        console.log('vliza1 ')
-        this.props.clearAlerts()
     }
 
     render() {
-        const {alert} = this.props;
         return (
             <Router history={history}>
                 <Header/>
@@ -35,23 +26,10 @@ class App extends Component {
                     <Route path={"/register"} component={Register}/>
                     <Route component={ErrorPage}/>
                 </Switch>
-                {/*<div className="container">*/}
-                {/*    <div className="col-sm-8 col-sm-offset-2">*/}
-                {/*        {alert.message && <div className={`alert ${alert.type}`}>{alert.message}</div>}*/}
-                {/*    </div>*/}
-                {/*</div>*/}
                 <Footer/>
             </Router>
         );
     }
 }
 
-const mapStateToProps = state => ({
-    alert: state.alert
-})
-
-const mapDispatchToProps = {
-    clearAlerts: alertActions.clear
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 import "./Header.css"
+import kinvey from "../../API/ApiCalls";
+import {userActions} from "../../actions/userActions";
 
 class Header extends Component {
 
@@ -10,11 +12,17 @@ class Header extends Component {
         super(props);
     }
 
+    logout = () => {
+        kinvey.logout();
+        this.props.logout();
+        localStorage.clear();
+    }
+
     renderLoggedInView = () => (
         <>
             <Link to={"/user/info"} className="py-2 d-none d-md-inline-block">My Profile</Link>
             <Link to={"/quizzes"} className="py-2 d-none d-md-inline-block">Take Quiz</Link>
-            <Link to={"/login"} className="py-2 d-none d-md-inline-block">Logout</Link>
+            <Link to={"/login"} onClick={this.logout} className="py-2 d-none d-md-inline-block">Logout</Link>
         </>
     )
 
@@ -39,7 +47,9 @@ class Header extends Component {
                                     </path>
                                 </svg>
                             </Link>
+
                             {this.props.isLoggedIn ? this.renderLoggedInView() : this.renderNotLoggedView()}
+
                         </div>
                     </nav>
                 </header>
@@ -49,8 +59,11 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => ({
-    user: state.user,
     isLoggedIn: state.isLoggedIn
 })
 
-export default connect(mapStateToProps)(Header)
+const mapDispatchToProps = {
+    logout: userActions.logout
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
