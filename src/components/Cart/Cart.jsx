@@ -22,9 +22,16 @@ const Cart = ({items, total, currency, removeFromCart}) => {
                             </div>
                         )}
                         {items.length === 0 && (
-                            <div className="alert alert-info">Cart is empty</div>
+                            <div className="alert alert-info mb-0">Cart is empty</div>
                         )}
                         <div className="cart-total">Total: {total} {currency}</div>
+                        {items.length > 0 && (
+                            <div className="cart-info mt-3">
+                                <small>Click the link to buy</small>
+                                <br/>
+                                <small>Shipping fee depends on your location</small>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -32,13 +39,11 @@ const Cart = ({items, total, currency, removeFromCart}) => {
     );
 }
 
-const mapStateToProps = (state, props) => {
-    return {
+const mapStateToProps = (state, props) => ({
         items: getItems(state, props),
         currency: getCurrency(state, props),
         total: getTotal(state, props)
-    }
-}
+})
 
 const mapDispatchToProps = (dispatch) => ({
     removeFromCart: (id) => dispatch(cartActions.removeFromCart(id))

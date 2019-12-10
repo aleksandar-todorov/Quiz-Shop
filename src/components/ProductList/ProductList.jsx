@@ -19,8 +19,8 @@ const ProductList = ({products}) => {
     );
 }
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps = (state) => ({
     products: state.products
 })
 
-export default connect(mapStateToProps)(ProductList);
+export default connect(mapStateToProps)(ProductList)

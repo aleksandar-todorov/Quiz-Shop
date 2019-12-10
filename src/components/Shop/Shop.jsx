@@ -5,7 +5,7 @@ import Cart from "../Cart/Cart.jsx";
 
 const Shop = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid px-5">
             <div className="row">
                 <div className="col-md-12 mb-4">
                     <h1 className="text-center">Quiz Shop</h1>
@@ -23,4 +23,4 @@ const Shop = () => {
     );
 }
 
-export default Shop;
+export default Shop

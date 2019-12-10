@@ -21,7 +21,7 @@ class Header extends Component {
     renderLoggedInView = () => (
         <>
             <Link to={"/user/info"} className="py-2 d-none d-md-inline-block">My Profile</Link>
-            <Link to={"/quizzes"} className="py-2 d-none d-md-inline-block">Take Quiz</Link>
+            <Link to={"/quiz"} className="py-2 d-none d-md-inline-block">Take Quiz</Link>
             <Link to={"/shop"} className="py-2 d-none d-md-inline-block">Shop</Link>
             <Link to={"/login"} onClick={this.logout} className="py-2 d-none d-md-inline-block">Logout</Link>
         </>

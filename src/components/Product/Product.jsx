@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import { isInCart } from '../../reducers/cartReducer';
-import { cartActions } from '../../actions/cartActions';
+import {isInCart} from '../../reducers/cartReducer';
+import {cartActions} from '../../actions/cartActions';
 import './Product.css'
 
 class Product extends Component {
     handleClick = () => {
-        const { id, addToCart, removeFromCart, isInCart } = this.props;
+        const {id, addToCart, removeFromCart, isInCart} = this.props;
 
-        if (isInCart) {
+        if (isInCart)
             removeFromCart(id);
-        } else {
+        else
             addToCart(id);
-        }
     }
 
     render() {
-        const { name, price, currency, image, isInCart } = this.props;
+        const {name, price, currency, image, isInCart} = this.props;
 
         return (
             <div className="product thumbnail">
-                <img src={image} className="product-image" alt="product" />
+                <img src={image} className="product-image" alt="product"/>
                 <div className="caption">
                     <h3>{name}</h3>
                     <div className="product-price">{price} {currency}</div>
@@ -39,15 +38,13 @@ class Product extends Component {
     }
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        isInCart: isInCart(state, props)
-    }
-}
+const mapStateToProps = (state, props) => ({
+    isInCart: isInCart(state, props)
+})
 
 const mapDispatchToProps = (dispatch) => ({
     addToCart: (id) => dispatch(cartActions.addToCart(id)),
     removeFromCart: (id) => dispatch(cartActions.removeFromCart(id))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Product);
+export default connect(mapStateToProps, mapDispatchToProps)(Product)

@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
 import kinvey from '../../API/ApiCalls'
-import './Register.css'
 
 class Register extends Component {
 
@@ -51,7 +50,7 @@ class Register extends Component {
                     <label htmlFor="inputRePassword">Re-Password</label>
                 </div>
 
-                <button className="btn btn-lg btn-dark btn-block register__btn" type="submit">Sign Up</button>
+                <button className="btn btn-lg btn-dark btn-block w-25 m-auto" type="submit">Sign Up</button>
 
                 <div className="text-center mb-4">
                     <p className="alreadyUser"> Already have account? Then just

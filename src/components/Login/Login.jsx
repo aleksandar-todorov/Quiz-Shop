@@ -6,7 +6,6 @@ import kinvey from '../../API/ApiCalls'
 import Home from '../Home/Home'
 import {history} from "../../helpers/history";
 import {userActions} from '../../actions/userActions'
-import './Login.css'
 
 class Login extends Component {
 
@@ -45,7 +44,7 @@ class Login extends Component {
                     <label htmlFor="inputPassword">Password</label>
                 </div>
 
-                <button className="btn btn-lg btn-dark btn-block login__btn" type="submit">Sign In</button>
+                <button className="btn btn-lg btn-dark btn-block w-25 m-auto" type="submit">Sign In</button>
 
                 <div className="text-center mb-4">
                     <p className="alreadyUser"> Don't have account? Then just

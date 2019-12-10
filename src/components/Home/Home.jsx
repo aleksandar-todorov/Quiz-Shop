@@ -27,7 +27,7 @@ class Home extends Component {
                             </p>
                         </div>
                         <div className="actions">
-                            <Link to={"Quizzes"} className="btn btn-dark btn-lg">Take the first one? </Link>
+                            <Link to={"/quiz"} className="btn btn-dark btn-lg">Take the first one? </Link>
                         </div>
                     </div>
                 </div>
