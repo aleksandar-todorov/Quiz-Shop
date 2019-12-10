@@ -4,14 +4,16 @@
     <list default="true" id="fddc99b4-1ebd-4131-90b2-3918f34393fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/alertActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/userActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ErrorPage/ErrorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ErrorPage/ErrorPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/alertConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register/Register.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/userConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/alertReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,21 +43,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop old ver - node and jquery\styles" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
-      <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public\images" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\reducers" />
       <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\components\Home" />
     </key>
   </component>
@@ -107,7 +114,11 @@
       <workItem from="1575282747229" duration="4103000" />
       <workItem from="1575448155678" duration="21907000" />
       <workItem from="1575747717853" duration="3411000" />
-      <workItem from="1575799274156" duration="2287000" />
+      <workItem from="1575799274156" duration="9829000" />
+      <workItem from="1575878571124" duration="3167000" />
+      <workItem from="1575918016849" duration="5689000" />
+      <workItem from="1575929090479" duration="92000" />
+      <workItem from="1575929192136" duration="6078000" />
     </task>
     <servers />
   </component>

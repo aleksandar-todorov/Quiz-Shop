@@ -8,7 +8,7 @@ function ErrorPage() {
         <div className="container">
             <div id="fouronefour">
                 <h3>Sorry, Page Not Found</h3>
-                <img className="no-found-picture" src={NotFoundImg} alt="eho"/>
+                <img className="home-img no-found-picture" src={NotFoundImg} alt="eho"/>
             </div>
         </div>
     )

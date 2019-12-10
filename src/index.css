@@ -40,13 +40,7 @@ a{
   text-decoration: none;
 }
 
-.btn{
-  width: 25%;
-  margin: 0 auto;
-  color: white;
-}
-
-img{
+.home-img{
   display: block;
   width: 100%;
   height: auto;
