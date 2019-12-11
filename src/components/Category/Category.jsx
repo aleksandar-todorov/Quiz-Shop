@@ -1,14 +1,6 @@
 import React, {Component} from 'react'
 import Select from 'react-select';
-
-const options = [
-    {value: 'health', label: 'Health'},
-    {value: 'money', label: 'Money'},
-    {value: 'relationships', label: 'Relationships'},
-    {value: 'career', label: 'Career'},
-    {value: 'creative', label: 'Creative'},
-    {value: 'fun', label: 'Fun'},
-];
+import {options} from "../../constants/categoryOptionsConstants";
 
 class Category extends Component {
 
@@ -35,6 +27,7 @@ class Category extends Component {
                         <div className="col-md-9 m-auto">
                             <Select
                                 value={selectedOption}
+                                placeholder={'Choose Category'}
                                 onChange={this.handleChange}
                                 options={options}
                             />

@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fddc99b4-1ebd-4131-90b2-3918f34393fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quiz/Quiz.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/Quiz.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/productsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/productsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Category/Category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Category/Category.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Product/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product/Product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList/ProductList.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -49,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components\Header" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public\images" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\reducers" />
@@ -116,7 +113,7 @@
       <workItem from="1575929090479" duration="92000" />
       <workItem from="1575929192136" duration="6997000" />
       <workItem from="1575965207810" duration="16454000" />
-      <workItem from="1576047314033" duration="19341000" />
+      <workItem from="1576047314033" duration="22348000" />
     </task>
     <servers />
   </component>

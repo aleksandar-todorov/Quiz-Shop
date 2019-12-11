@@ -6,6 +6,7 @@ import {cartActions} from '../../actions/cartActions';
 import './Product.css'
 
 class Product extends Component {
+
     handleClick = () => {
         const {id, addToCart, removeFromCart, isInCart} = this.props;
 
