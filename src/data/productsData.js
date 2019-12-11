@@ -42,7 +42,7 @@ const data = [
     currency: 'USD',
     image: 'images/05.jpg',
     link : 'https://www.amazon.com/Universal-Battery-Charger-chargering-Samsung/dp/B07SWV43H9',
-    category : 'tech'
+    category : 'creative'
   },
   {
     id: 6,

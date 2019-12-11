@@ -5,21 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/CartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product/Product.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductList/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList/ProductList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register/Register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Shop/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shop/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/productsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Quiz/Quiz.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/Quiz.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/productsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/productsData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Quiz-Shop old ver - node and jquery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -58,18 +48,18 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop old ver - node and jquery\styles" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public\images" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\reducers" />
       <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\components\Home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\data" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -125,7 +115,8 @@
       <workItem from="1575918016849" duration="5689000" />
       <workItem from="1575929090479" duration="92000" />
       <workItem from="1575929192136" duration="6997000" />
-      <workItem from="1575965207810" duration="10445000" />
+      <workItem from="1575965207810" duration="16454000" />
+      <workItem from="1576047314033" duration="19341000" />
     </task>
     <servers />
   </component>

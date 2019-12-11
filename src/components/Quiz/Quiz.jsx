@@ -1,67 +1,115 @@
 import React, {Component} from 'react'
-import Select from 'react-select';
 
-const options = [
-    {value: 'random', label: 'Random'},
-    {value: 'health', label: 'Health'},
-    {value: 'money', label: 'Money'},
-    {value: 'relationships', label: 'Relationships'},
-    {value: 'career', label: 'Career'},
-    {value: 'tech', label: 'Tech'},
-    {value: 'create', label: 'Creative'},
-    {value: 'fun', label: 'Fun'},
-    {value: 'mindBending', label: 'Mind Bending'},
-];
+import Category from "../Category/Category";
+import Result from "../Result/Result";
+import QA from "../QA/QA";
+import quizQuestions from "../../data/quizQuestions";
+import './Quiz.css'
 
 class Quiz extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            counter: 0,
+            questionId: 1,
+            question: '',
+            answerOptions: [],
+            answer: '',
+            answers: {},
+            result: '',
+            category: JSON.parse(localStorage.getItem('category'))
+        };
+
+        this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
 
-    state = {
-        selectedOption: null,
-    };
+    componentDidMount() {
+        if (this.state.category !== null) {
+            const answerOptions = quizQuestions[this.state.category.value].map(question => question.answers)
+            this.setState({
+                question: quizQuestions[this.state.category.value][0].question,
+                answerOptions: answerOptions[0]
+            });
+        }
+    }
 
-    handleChange = selectedOption => {
-        this.setState({selectedOption});
-        console.log(`Option selected:`, selectedOption);
-    };
+    handleAnswerSelected(event) {
+        this.setUserAnswer(event.currentTarget.value);
 
-    render() {
+        if (this.state.questionId < quizQuestions[this.state.category.value].length) {
+            setTimeout(() => this.setNextQuestion(), 300);
+        } else {
+            setTimeout(() => this.setResults(this.getResults()), 300);
+        }
+    }
 
-        const {selectedOption} = this.state;
+    setUserAnswer(answer) {
+        this.setState((state) => ({
+            answers: {
+                ...state.answers,
+                [answer]: (state.answers[answer] || 0) + 1
+            },
+            answer
+        }));
+    }
 
+    setNextQuestion() {
+        const counter = this.state.counter + 1;
+        const questionId = this.state.questionId + 1;
+
+        this.setState({
+            counter,
+            questionId,
+            question: quizQuestions[this.state.category.value][counter].question,
+            answerOptions: quizQuestions[this.state.category.value][counter].answers,
+            answer: ''
+        });
+    }
+
+    getResults() {
+        const answers = this.state.answers;
+        const answersKeys = Object.keys(answers);
+        const answersValues = answersKeys.map(key => answers[key]);
+        const maxAnswerCount = Math.max.apply(null, answersValues);
+
+        return answersKeys.filter(key => answers[key] === maxAnswerCount);
+    }
+
+    setResults(result) {
+        if (result.length === 1)
+            this.setState({result: result[0]});
+        else
+            this.setState({result: 'You are OK in that category! Try another.'});
+    }
+
+    renderQA() {
         return (
-            <form onSubmit={this.submitHandler}>
-
-                <div className="text-center mb-4">
-                    <h1 className="h3 mb-3 font-weight-normal">Pick a Category for your Quiz</h1>
-                </div>
-
-                <div className="form-group my-5 w-50 mx-auto">
-                    <div className="row">
-                        <div className="col-md-9 m-auto">
-                            <Select
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={options}
-                            />
-                        </div>
-                        <div className="col-md-3">
-                            <button className="btn btn-lg btn-dark btn-block m-auto" type="submit">Take a Quiz
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </form>
+            <QA
+                answer={this.state.answer}
+                answerOptions={this.state.answerOptions}
+                questionId={this.state.questionId}
+                question={this.state.question}
+                questionTotal={quizQuestions[this.state.category.value].length}
+                onAnswerSelected={this.handleAnswerSelected}
+            />
         );
     }
 
-    submitHandler = (e) => {
-        e.preventDefault();
+    renderResult() {
+        return <Result quizResult={this.state.result}/>;
+    }
+
+    render() {
+        return (
+            <>
+                <Category/>
+                <div className="qa py-5">
+                    {this.state.category ? this.state.result ? this.renderResult() : this.renderQA() : null}
+                </div>
+            </>
+        );
     }
 }
 

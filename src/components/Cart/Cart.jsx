@@ -27,7 +27,7 @@ const Cart = ({items, total, currency, removeFromCart}) => {
                         <div className="cart-total">Total: {total} {currency}</div>
                         {items.length > 0 && (
                             <div className="cart-info mt-3">
-                                <small>Click the link to buy</small>
+                                <small>Click the name to buy</small>
                                 <br/>
                                 <small>Shipping fee depends on your location</small>
                             </div>
