@@ -6,6 +6,7 @@ import kinvey from '../../API/ApiCalls'
 import Home from '../Home/Home'
 import {history} from "../../helpers/history";
 import {userActions} from '../../actions/userActions'
+import userService from '../../service/userService'
 
 class Login extends Component {
 
@@ -83,9 +84,10 @@ class Login extends Component {
     submitHandler = (e) => {
         e.preventDefault();
         const {username, password} = this.state;
-        kinvey.login(username, password).then(() => {
+        kinvey.login(username, password).then((res) => {
             this.props.login(username);
             localStorage.setItem('user', JSON.stringify(username));
+            userService.saveSession(res);
             history.push('/');
         }).catch(() => {
             this.setState({

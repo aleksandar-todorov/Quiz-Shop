@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Router, Route, Switch} from 'react-router-dom'
+import {Route, Switch, withRouter} from 'react-router-dom'
 
 import './App.css'
 import Home from './components/Home/Home.jsx'
@@ -9,8 +9,8 @@ import Shop from "./components/Shop/Shop";
 import Quiz from "./components/Quiz/Quiz";
 import Header from './components/Header/Header.jsx'
 import Footer from "./components/Footer/Footer";
+import Profile from "./components/Profile/Profile";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
-import {history} from './helpers/history';
 
 
 class App extends Component {
@@ -21,20 +21,21 @@ class App extends Component {
     //TODO forbid /login and /register if the user is logged in.
     render() {
         return (
-            <Router history={history}>
+            <>
                 <Header/>
                 <Switch>
-                    <Route path={"/"} exact component={Home}/>
+                    <Route exact path={"/"} component={Home}/>
                     <Route path={"/login"} component={Login}/>
                     <Route path={"/register"} component={Register}/>
                     <Route path={"/shop"} component={Shop}/>
                     <Route path={"/quiz"} component={Quiz}/>
+                    <Route path={"/profile"} component={Profile}/>
                     <Route component={ErrorPage}/>
                 </Switch>
                 <Footer/>
-            </Router>
+            </>
         );
     }
 }
 
-export default App;
+export default withRouter(App);

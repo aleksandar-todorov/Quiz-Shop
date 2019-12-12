@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import Category from "../Category/Category";
-import Result from "../Result/Result";
+import QuizResult from "../QuizResult/QuizResult";
 import QA from "../QA/QA";
 import quizQuestions from "../../data/quizQuestions";
 import './Quiz.css'
@@ -98,7 +98,7 @@ class Quiz extends Component {
     }
 
     renderResult() {
-        return <Result quizResult={this.state.result}/>;
+        return <QuizResult quizResult={this.state.result}/>;
     }
 
     render() {

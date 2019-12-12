@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fddc99b4-1ebd-4131-90b2-3918f34393fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Cart/CartItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Category/Category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Category/Category.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product/Product.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductList/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList/ProductList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Quiz/Quiz.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/Quiz.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizResult/QuizResult.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/Result.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizResult/QuizResult.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,19 +53,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components\Header" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public\images" />
-      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\reducers" />
-      <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\components\Home" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\data" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public" />
       <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\components\Header" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\images" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\public\images" />
+      <recent name="G:\IT\SU\JS Web\Final Project - Quiz Shop\Quiz-Shop\src\reducers" />
+      <recent name="D:\IT\SoftUni\JS Web\React\Quiz Shop\react app\quiz-shop\src\components\Home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -113,7 +122,9 @@
       <workItem from="1575929090479" duration="92000" />
       <workItem from="1575929192136" duration="6997000" />
       <workItem from="1575965207810" duration="16454000" />
-      <workItem from="1576047314033" duration="22348000" />
+      <workItem from="1576047314033" duration="23655000" />
+      <workItem from="1576095797975" duration="5160000" />
+      <workItem from="1576135116303" duration="22897000" />
     </task>
     <servers />
   </component>

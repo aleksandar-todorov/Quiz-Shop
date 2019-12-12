@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import CartItem from './CartItem';
+import CartItem from './CartItem.jsx';
 import {getCurrency, getItems, getTotal} from '../../reducers/cartReducer';
 import {cartActions} from '../../actions/cartActions';
 import './Cart.css'
@@ -40,9 +40,9 @@ const Cart = ({items, total, currency, removeFromCart}) => {
 }
 
 const mapStateToProps = (state, props) => ({
-        items: getItems(state, props),
-        currency: getCurrency(state, props),
-        total: getTotal(state, props)
+    items: getItems(state, props),
+    currency: getCurrency(state, props),
+    total: getTotal(state, props),
 })
 
 const mapDispatchToProps = (dispatch) => ({

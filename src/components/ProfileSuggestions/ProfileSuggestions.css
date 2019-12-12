@@ -1,0 +1,27 @@
+.error_message {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.success_message {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+textarea.form-control {
+    width: 100%;
+}
+
+#form_container {
+    padding: 15px 15px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.suggestion-main{
+    background-color: #F4EAD5;
+    background-image: url("../../images/suggestions-background.jpg");
+    background-size: inherit;
+}
