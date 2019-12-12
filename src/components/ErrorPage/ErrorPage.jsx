@@ -6,7 +6,7 @@ import NotFoundImg from "../../images/404face.png";
 function ErrorPage() {
     return (
         <div className="container">
-            <div id="fouronefour">
+            <div className="fourzerofour">
                 <h3>Sorry, Page Not Found</h3>
                 <img className="home-img no-found-picture" src={NotFoundImg} alt="eho"/>
             </div>

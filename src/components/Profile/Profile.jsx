@@ -19,7 +19,7 @@ class Profile extends Component {
                     <div className="col-md-3 ">
                         <div className="list-group">
                             <Link to={"/profile/data"}
-                                  className="list-group-item list-group-item-action active">Personal
+                                  className="list-group-item list-group-item-action">Personal
                                 Data</Link>
                             <Link to={"/profile/quizzes"}
                                   className="list-group-item list-group-item-action">Quizzes</Link>
@@ -34,16 +34,16 @@ class Profile extends Component {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <h4>My Profile</h4>
+                                        <h4>Hello {`${this.props.user}`}, choose an option from the menu.</h4>
                                         <hr/>
                                     </div>
                                 </div>
-                                    <Switch>
-                                        <Route path={"/profile/data"} component={ProfileData}/>
-                                        <Route path={"/profile/quizzes"} component={ProfileQuizzes}/>
-                                        <Route path={"/profile/history"} component={ProfileHistory}/>
-                                        <Route path={"/profile/suggestions"} component={ProfileSuggestions}/>
-                                    </Switch>
+                                <Switch>
+                                    <Route path={"/profile/data"} component={ProfileData}/>
+                                    <Route path={"/profile/quizzes"} component={ProfileQuizzes}/>
+                                    <Route path={"/profile/history"} component={ProfileHistory}/>
+                                    <Route path={"/profile/suggestions"} component={ProfileSuggestions}/>
+                                </Switch>
                             </div>
                         </div>
                     </div>
@@ -54,6 +54,7 @@ class Profile extends Component {
 }
 
 const mapStateToProps = state => ({
+    user : state.auth.user,
     isLoggedIn: state.auth.user
 })
 

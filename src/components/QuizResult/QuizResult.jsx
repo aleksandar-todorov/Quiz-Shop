@@ -8,10 +8,6 @@ class QuizResult extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            quizCount: null
-        };
     }
 
     componentDidMount() {
