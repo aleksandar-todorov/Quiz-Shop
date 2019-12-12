@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
-import {Route, Switch, withRouter} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 import './App.css'
+import {PrivateRoute} from "./components/PrivateRoute/PrivateRoute";
+import {ProtectedRoute} from "./components/ProtectedRoute/ProtectedRoute";
 import Home from './components/Home/Home.jsx'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
@@ -25,11 +27,11 @@ class App extends Component {
                 <Header/>
                 <Switch>
                     <Route exact path={"/"} component={Home}/>
-                    <Route path={"/login"} component={Login}/>
-                    <Route path={"/register"} component={Register}/>
+                    <ProtectedRoute path={"/login"} component={Login}/>
+                    <ProtectedRoute path={"/register"} component={Register}/>
                     <Route path={"/shop"} component={Shop}/>
-                    <Route path={"/quiz"} component={Quiz}/>
-                    <Route path={"/profile"} component={Profile}/>
+                    <PrivateRoute path={"/quiz"} component={Quiz}/>
+                    <PrivateRoute path={"/profile"} component={Profile}/>
                     <Route component={ErrorPage}/>
                 </Switch>
                 <Footer/>
@@ -38,4 +40,4 @@ class App extends Component {
     }
 }
 
-export default withRouter(App);
+export default App

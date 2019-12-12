@@ -27,7 +27,12 @@ class Header extends Component {
         </>
     )
 
-    renderNotLoggedView = () => (<Link to={"/login"} className="py-2 d-none d-md-inline-block">Login</Link>)
+    renderNotLoggedView = () => (
+        <>
+            <Link to={"/shop"} className="py-2 d-none d-md-inline-block">Shop</Link>
+            <Link to={"/login"} className="py-2 d-none d-md-inline-block">Login</Link>
+        </>
+    )
 
     render() {
         return (
