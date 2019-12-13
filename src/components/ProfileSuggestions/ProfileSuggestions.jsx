@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 import './ProfileSuggestions.css'
 import kinvey from "../../API/ApiCalls";
+import Message from "../Message/Message";
 
 class ProfileSuggestions extends Component {
     constructor(props) {
@@ -11,13 +12,14 @@ class ProfileSuggestions extends Component {
             message: '',
             name: '',
             email: '',
-            error: null
+            error: null,
+            success: null,
         }
     }
 
     render() {
 
-        const {message, name, email} = this.state
+        const {success, error} = this.state
 
         return (
             <div className="suggestion-main row">
@@ -31,7 +33,7 @@ class ProfileSuggestions extends Component {
                     <div className="row">
                         <div className="col-sm-12 form-group">
                             <label htmlFor="message">Message:</label>
-                            <textarea className="form-control" name="message" id="message" maxLength="6000" rows="7"
+                            <textarea className="form-control" name="message" id="message" maxLength="1000" rows="7"
                                       onChange={this.changeMessage}/>
                         </div>
                     </div>
@@ -54,13 +56,7 @@ class ProfileSuggestions extends Component {
                         </div>
                     </div>
                 </form>
-                <div className="success_message">
-                    <h3>Posted your message successfully!</h3>
-                </div>
-                <div className="error_message">
-                    <h3>Error</h3>
-                    Sorry there was an error sending your form.
-                </div>
+                <Message error={error} success={success}/>
             </div>
         )
     }
@@ -80,11 +76,21 @@ class ProfileSuggestions extends Component {
     submitHandler = (e) => {
         e.preventDefault();
         const {message, name, email} = this.state
-        //TODO save in DB - collection suggestions
-        kinvey.post('appdata', 'suggestions', 'basic', {
+        kinvey.post('appdata', 'suggestions', 'kinvey', {
             message,
             name,
             email
+        }).then(() => {
+            this.setState({
+                message : '',
+                error: null,
+                success: 'Your suggestion has been submitted!'
+            })
+        }).catch(() => {
+            this.setState({
+                error: 'Sorry your suggestion was NOT saved.',
+                success: null
+            })
         })
 
     }

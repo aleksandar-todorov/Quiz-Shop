@@ -46,7 +46,7 @@ class Category extends Component {
         this.setState({selectedOption});
     };
 
-    submitHandler = (e) => {
+    submitHandler = () => {
         localStorage.setItem('category', JSON.stringify(this.state.selectedOption))
     }
 }

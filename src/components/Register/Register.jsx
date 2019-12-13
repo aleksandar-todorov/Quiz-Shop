@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
 import kinvey from '../../API/ApiCalls'
+import Message from "../Message/Message";
 
 class Register extends Component {
 
@@ -58,24 +59,9 @@ class Register extends Component {
                         <Link to="/login"> Sign-In</Link>!
                     </p>
                 </div>
-
-                {
-                    error ?
-                        (
-                            <div className="text-center alert alert-danger w-50 m-auto font-weight-bold">
-                                {error}
-                            </div>
-                        ) : null
-                }
-
-                {
-                    success ?
-                        (
-                            <div className="text-center alert-success m-auto font-weight-bold">
-                                {success}
-                            </div>
-                        ) : null
-                }
+                <div className="w-50 m-auto">
+                <Message error={error} success={success}/>
+                </div>
             </form>
         )
     }

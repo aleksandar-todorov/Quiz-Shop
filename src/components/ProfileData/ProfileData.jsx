@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from "react-redux";
 import kinvey from "../../API/ApiCalls";
 import {userActions} from "../../actions/userActions";
+import Message from "../Message/Message";
 
 class ProfileData extends Component {
     constructor(props) {
@@ -38,23 +39,7 @@ class ProfileData extends Component {
                                 </button>
                             </div>
                         </div>
-
-                        {error ?
-                            (
-                                <div className="text-center alert alert-danger m-auto font-weight-bold">
-                                    {error}
-                                </div>
-                            ) : null
-                        }
-
-                        {success ?
-                            (
-                                <div className="text-center alert-success m-auto font-weight-bold">
-                                    {success}
-                                </div>
-                            ) : null
-                        }
-
+                        <Message error={error} success={success}/>
                     </form>
                 </div>
             </div>

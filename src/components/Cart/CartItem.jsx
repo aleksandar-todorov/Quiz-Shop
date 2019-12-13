@@ -24,7 +24,7 @@ class CartItem extends Component {
 
     render() {
 
-        const {name, price, currency, link, onClick} = this.props;
+        const {name, price, currency, onClick} = this.props;
 
         return (
             <div className="cart-item">
