@@ -13,7 +13,6 @@ class ProfileHistory extends Component {
     componentDidMount() {
         kinvey.get('user', `?query={"username":"${this.props.username}"}`, 'kinvey')
             .then((res) => {
-                console.log(res)
                 this.setState({
                     clicks: res[0].clicks
                 })

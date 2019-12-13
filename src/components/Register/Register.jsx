@@ -12,13 +12,14 @@ class Register extends Component {
             username: '',
             password: '',
             repeatPassword: '',
-            error: null
+            error: null,
+            success: null,
         }
     }
 
     render() {
 
-        const {username, password, repeatPassword, error} = this.state;
+        const {username, password, repeatPassword, error, success} = this.state;
 
         return (
 
@@ -66,6 +67,15 @@ class Register extends Component {
                             </div>
                         ) : null
                 }
+
+                {
+                    success ?
+                        (
+                            <div className="text-center alert-success m-auto font-weight-bold">
+                                {success}
+                            </div>
+                        ) : null
+                }
             </form>
         )
     }
@@ -83,7 +93,6 @@ class Register extends Component {
     }
 
     //input register validations
-    //TODO check if this user is already created
     submitHandler = (e) => {
         e.preventDefault();
         const {username, password, repeatPassword} = this.state;
@@ -100,15 +109,23 @@ class Register extends Component {
                 error: 'Passwords must match'
             })
         } else {
-            this.setState({
-                error: null
-            })
             kinvey.post('user', '', 'basic', {
                 username,
-                password
+                password,
+                clicks: 0,
+                quizzes: 0
+            }).then((res) => {
+                this.setState({
+                    error: null,
+                    success: 'You registered successfully!'
+                })
+                setTimeout(() => this.props.history.push("/login"), 1200)
+            }).catch(() => {
+                console.log('ko staa')
+                this.setState({
+                    error: "Sorry this username is already taken!"
+                })
             })
-
-            this.props.history.push("/login");
         }
     }
 }

@@ -35,7 +35,7 @@ const quizQuestions = {
             ]
         },
         {
-            question: "How much coffee and sweat you consume during the day?",
+            question: "How much coffee and sweets you consume during the day?",
             answers: [
                 {
                     type: "Your health is at top level. You better improve some other category.",

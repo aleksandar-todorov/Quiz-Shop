@@ -31,7 +31,7 @@ class Home extends Component {
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <h3>Welcome back, <strong>{`${this.props.user}`}</strong></h3>
+                    <h3>Welcome, <strong>{`${this.props.user}`}</strong></h3>
                     {this.state.quizzes > 0 ?
                         <>
                             <div className="m-5">

@@ -17,7 +17,7 @@ class ProfileData extends Component {
     //TODO upload pic with cloudanary
     render() {
 
-        const {username, error, success} = this.state;
+        const {error, success} = this.state;
 
         return (
             <div className="row">
@@ -39,22 +39,20 @@ class ProfileData extends Component {
                             </div>
                         </div>
 
-                        {
-                            error ?
-                                (
-                                    <div className="text-center alert alert-danger m-auto font-weight-bold">
-                                        {error}
-                                    </div>
-                                ) : null
+                        {error ?
+                            (
+                                <div className="text-center alert alert-danger m-auto font-weight-bold">
+                                    {error}
+                                </div>
+                            ) : null
                         }
 
-                        {
-                            success ?
-                                (
-                                    <div className="text-center alert-success m-auto font-weight-bold">
-                                        {success}
-                                    </div>
-                                ) : null
+                        {success ?
+                            (
+                                <div className="text-center alert-success m-auto font-weight-bold">
+                                    {success}
+                                </div>
+                            ) : null
                         }
 
                     </form>
@@ -71,14 +69,12 @@ class ProfileData extends Component {
         e.preventDefault();
         if (this.state.username === this.props.user) {
             this.setState({
-                error: "Your username must be different than previews one!"
+                error: "Your new username must be different than the old one!"
             })
         } else {
-
             kinvey.get('user', `?query={"username":"${this.state.username}"}`, 'kinvey')
                 .then((res) => {
-
-                    if (res) {
+                    if (res === undefined || res.length === 0) {
                         kinvey.get('user', `?query={"username":"${this.props.user}"}`, 'kinvey')
                             .then((res) => {
                                 let user = res[0]
@@ -89,15 +85,14 @@ class ProfileData extends Component {
                             })
                         this.setState({
                             error: null,
-                            success: 'You successfully changed your username. You will be logged out after 3 seconds.'
+                            success: 'You successfully changed your username. You will be logged out.'
                         })
                         setTimeout(() => {
                             kinvey.logout();
                             this.props.logout();
                             localStorage.clear();
                             this.props.history.push("/login");
-
-                        }, 3000);
+                        }, 2000);
                     } else {
                         this.setState({
                             error: "Sorry this username is already taken!"
