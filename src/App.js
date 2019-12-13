@@ -20,7 +20,6 @@ class App extends Component {
         super(props);
     }
 
-    //TODO forbid /login and /register if the user is logged in.
     render() {
         return (
             <>
