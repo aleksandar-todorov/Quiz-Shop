@@ -107,7 +107,6 @@ class Register extends Component {
                 })
                 setTimeout(() => this.props.history.push("/login"), 1200)
             }).catch(() => {
-                console.log('ko staa')
                 this.setState({
                     error: "Sorry this username is already taken!"
                 })

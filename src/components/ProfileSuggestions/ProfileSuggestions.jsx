@@ -33,8 +33,9 @@ class ProfileSuggestions extends Component {
                     <div className="row">
                         <div className="col-sm-12 form-group">
                             <label htmlFor="message">Message:</label>
-                            <textarea className="form-control" name="message" id="message" maxLength="1000" rows="7"
-                                      onChange={this.changeMessage}/>
+                            <textarea className="form-control" name="message" id="message"
+                                      minLength="10" maxLength="1000" rows="7"
+                                      required onChange={this.changeMessage}/>
                         </div>
                     </div>
                     <div className="row">

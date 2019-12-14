@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import './Cart.css'
+import '../Cart/Cart.css'
 import kinvey from "../../API/ApiCalls";
 import {connect} from "react-redux";
 

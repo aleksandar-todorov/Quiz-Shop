@@ -47,7 +47,7 @@ class Home extends Component {
                         </>
                         :
                         <>
-                            <div className="fourzerofour">
+                            <div className="four-zero-four">
                                 <img className="home-img no-found-picture" src={NotFoundPic} alt=''/>
                             </div>
                             <div>
@@ -62,7 +62,7 @@ class Home extends Component {
                 </div>
             </div>
         </div>
-    )
+    );
 
 
     renderNotLoggedView = () => (
@@ -81,7 +81,7 @@ class Home extends Component {
                 <img className="home-img home-quiz-picture center-block" src={QuizShopPic} alt=''/>
             </div>
         </div>
-    )
+    );
 
     render() {
         return (
@@ -95,7 +95,7 @@ class Home extends Component {
 const mapStateToProps = state => ({
     user: state.auth.user,
     isLoggedIn: state.auth.isLoggedIn
-})
+});
 
 export default connect(mapStateToProps)(Home)
 

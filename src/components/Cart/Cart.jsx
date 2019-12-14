@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import CartItem from './CartItem.jsx';
+import CartItem from '../CartItem/CartItem.jsx';
 import {getCurrency, getItems, getTotal} from '../../reducers/cartReducer';
 import {cartActions} from '../../actions/cartActions';
 import './Cart.css'

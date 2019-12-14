@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    name: 'Adjustable Shelf Organizer',
+    name: 'Adjustable Shelf',
     price: 29.99,
     currency: 'USD',
     image: 'images/01.jpg',
@@ -10,7 +10,7 @@ const data = [
   },
   {
     id: 2,
-    name: 'Adjustable Standing Desk',
+    name: 'Adjustable Desk',
     price: 99.87,
     currency: 'USD',
     image: 'images/02.jpg',
@@ -52,6 +52,33 @@ const data = [
     image: 'images/06.jpg',
     link : 'https://play.google.com/store/apps/details?id=homeworkout.homeworkouts.noequipment',
     category : 'health'
+  },
+  {
+    id: 7,
+    name: 'Think and Grow Rich',
+    price: 11.51,
+    currency: 'USD',
+    image: 'images/07.jpg',
+    link : 'https://www.amazon.com/Think-Grow-Rich-Landmark-Bestseller/dp/1585424331/',
+    category : 'money'
+  },
+  {
+    id: 8,
+    name: 'Win Friends',
+    price: 15.29,
+    currency: 'USD',
+    image: 'images/08.jpg',
+    link : 'https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034',
+    category : 'relationships'
+  },
+  {
+    id: 9,
+    name: 'Rubik Cubes',
+    price: 15.99,
+    currency: 'USD',
+    image: 'images/09.jpg',
+    link : 'https://www.amazon.com/Aitey-Bundle-Pyramid-Smooth-Puzzle/dp/B07BF8F3VR',
+    category : 'fun'
   }
 ];
 
