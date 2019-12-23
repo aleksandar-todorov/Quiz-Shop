@@ -15,7 +15,8 @@
     "react-select": "3.0.8",
     "react-transition-group": "^1.2.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "chroma-js": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

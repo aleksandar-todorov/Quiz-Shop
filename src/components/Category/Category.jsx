@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Select from 'react-select';
-import {options} from "../../constants/categoryOptionsConstants";
+import {categoryOptions} from "../../constants/categoryOptionsConstants";
+import chroma from "chroma-js";
 
 class Category extends Component {
 
@@ -14,6 +15,54 @@ class Category extends Component {
 
     render() {
 
+        const dot = (color = '#ccc') => ({
+            alignItems: 'center',
+            display: 'flex',
+
+            ':before': {
+                backgroundColor: color,
+                borderRadius: 10,
+                content: '" "',
+                display: 'block',
+                marginRight: 8,
+                height: 10,
+                width: 10,
+            },
+        });
+
+        const colourStyles = {
+            control: styles => ({ ...styles, backgroundColor: 'white' }),
+            option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+                const color = chroma(data.color);
+                return {
+                    ...styles,
+                    backgroundColor: isDisabled
+                        ? null
+                        : isSelected
+                            ? data.color
+                            : isFocused
+                                ? color.alpha(0.1).css()
+                                : null,
+                    color: isDisabled
+                        ? '#ccc'
+                        : isSelected
+                            ? chroma.contrast(color, 'white') > 2
+                                ? 'white'
+                                : 'black'
+                            : data.color,
+                    cursor: isDisabled ? 'not-allowed' : 'default',
+
+                    ':active': {
+                        ...styles[':active'],
+                        backgroundColor: !isDisabled && (isSelected ? data.color : color.alpha(0.3).css()),
+                    },
+                };
+            },
+            input: styles => ({ ...styles, ...dot() }),
+            placeholder: styles => ({ ...styles, ...dot() }),
+            singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
+        };
+
         const {selectedOption} = this.state;
 
         return (
@@ -24,12 +73,13 @@ class Category extends Component {
 
                 <div className="form-group my-5 w-50 mx-auto">
                     <div className="row">
-                        <div className="col-md-9 m-auto">
+                        <div className="col-md-9 m-auto font-weight-bold">
                             <Select
                                 value={selectedOption}
                                 placeholder={'Choose Category'}
                                 onChange={this.handleChange}
-                                options={options}
+                                options={categoryOptions}
+                                styles={colourStyles}
                             />
                         </div>
                         <div className="col-md-3">

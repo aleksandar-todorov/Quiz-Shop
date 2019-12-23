@@ -102,10 +102,14 @@ class Quiz extends Component {
     }
 
     render() {
+        const divBackgroundStyle = {
+            background: this.state.category.color,
+        };
+
         return (
             <>
                 <Category/>
-                <div className="qa py-5">
+                <div className="qa py-5" style={divBackgroundStyle}>
                     {this.state.category ? this.state.result ? this.renderResult() : this.renderQA() : null}
                 </div>
             </>

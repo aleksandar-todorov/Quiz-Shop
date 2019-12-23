@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import Product from '../Product/Product.jsx';
 import './ProductList.css'
-import {allOptions} from "../../constants/categoryOptionsConstants";
+import {allCategoryOptions} from "../../constants/categoryOptionsConstants";
 import Select from "react-select";
 
 class ProductList extends Component {
@@ -31,7 +31,7 @@ class ProductList extends Component {
                             value={selectedOption}
                             placeholder={'All'}
                             onChange={this.handleChange}
-                            options={allOptions}
+                            options={allCategoryOptions}
                         />
                     </div>
                 </div>
