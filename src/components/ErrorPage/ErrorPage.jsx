@@ -5,12 +5,16 @@ import NotFoundImg from "../../images/404face.png";
 
 function ErrorPage() {
     return (
-        <div className="container">
-            <div className="four-zero-four">
-                <h3>Sorry, Page Not Found</h3>
-                <img className="home-img no-found-picture" src={NotFoundImg} alt="eho"/>
+        <>
+            <div className="text-center mt-5">
+            <h3>Sorry, Page Not Found</h3>
             </div>
-        </div>
+            <div className="container">
+                <div className="four-zero-four">
+                    <img className="home-img no-found-picture" src={NotFoundImg} alt="eho"/>
+                </div>
+            </div>
+        </>
     )
 }
 

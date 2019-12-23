@@ -18,8 +18,10 @@ class Header extends Component {
         localStorage.clear();
     }
 
+    //TODO change theme - dark / light
     renderLoggedInView = () => (
         <>
+            <Link to={"/about"} className="py-2 d-none d-md-inline-block">About</Link>
             <Link to={"/profile"} className="py-2 d-none d-md-inline-block">My Profile</Link>
             <Link to={"/quiz"} className="py-2 d-none d-md-inline-block">Take Quiz</Link>
             <Link to={"/shop"} className="py-2 d-none d-md-inline-block">Shop</Link>
@@ -29,6 +31,7 @@ class Header extends Component {
 
     renderNotLoggedView = () => (
         <>
+            <Link to={"/about"} className="py-2 d-none d-md-inline-block">About</Link>
             <Link to={"/shop"} className="py-2 d-none d-md-inline-block">Shop</Link>
             <Link to={"/login"} className="py-2 d-none d-md-inline-block">Login</Link>
         </>

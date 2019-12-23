@@ -8,6 +8,7 @@ import Home from './components/Home/Home.jsx'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import Shop from "./components/Shop/Shop";
+import About from "./components/About/About";
 import Quiz from "./components/Quiz/Quiz";
 import Header from './components/Header/Header.jsx'
 import Footer from "./components/Footer/Footer";
@@ -29,6 +30,7 @@ class App extends Component {
                     <ProtectedRoute path={"/login"} component={Login}/>
                     <ProtectedRoute path={"/register"} component={Register}/>
                     <Route path={"/shop"} component={Shop}/>
+                    <Route path={"/about"} component={About}/>
                     <PrivateRoute path={"/quiz"} component={Quiz}/>
                     <PrivateRoute path={"/profile"} component={Profile}/>
                     <Route component={ErrorPage}/>

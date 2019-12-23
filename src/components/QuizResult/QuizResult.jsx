@@ -22,7 +22,6 @@ class QuizResult extends Component {
             })
     }
 
-
     render() {
         return (
             <CSSTransitionGroup
