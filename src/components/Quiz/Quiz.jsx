@@ -102,9 +102,11 @@ class Quiz extends Component {
     }
 
     render() {
-        const divBackgroundStyle = {
+        let divBackgroundStyle = null;
+        if(this.state.category)
+        divBackgroundStyle = {
             background: this.state.category.color,
-        };
+        }
 
         return (
             <>

@@ -20,6 +20,7 @@ class QuizResult extends Component {
                     clicks : res[0].clicks
                 })
             })
+        localStorage.setItem('category', null)
     }
 
     render() {
