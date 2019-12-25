@@ -64,9 +64,8 @@ class Home extends Component {
         </div>
     );
 
-
     renderNotLoggedView = () => (
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 px-md-5 mx-5">
+        <div className="d-md-flex flex-md-equal my-md-3 px-md-5 mx-5">
             <div className="col-md-6">
                 <h2>Buy products <span className="text-muted">which will improve your life!</span>
                 </h2>
