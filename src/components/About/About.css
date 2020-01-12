@@ -1,0 +1,8 @@
+.about-us-main{
+    background-color: #F4EAD5;
+    background-image: url("../../images/about-us-background2.jpg");
+    background-size: cover;
+    height: 400px;
+    width: 80%;
+    margin : auto;
+}

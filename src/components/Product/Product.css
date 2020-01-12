@@ -1,0 +1,14 @@
+.product {
+    margin: 0;
+    overflow: auto;
+}
+
+.product-price {
+    display: inline-block;
+    line-height: 34px;
+}
+
+.product-image{
+    width: 250px;
+    height: 250px;
+}
